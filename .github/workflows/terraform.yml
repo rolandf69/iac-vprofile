@@ -13,7 +13,7 @@ on:
     paths:
       - terraform/**
   workflow_dispatch:
-    
+
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -36,8 +36,8 @@ jobs:
 
       - name: Setup terraform with specified version on the runner
         uses: hashicorp/setup-terraform@v2
-        # with:
-        #   terraform_version: 1.6.3 taks ss
+        with:
+          terraform_version: 1.6.3 taks ss
 
       - name: Terraform init
         id: init
